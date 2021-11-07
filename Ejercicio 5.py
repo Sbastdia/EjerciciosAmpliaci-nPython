@@ -6,8 +6,23 @@ import sys
 
 
 def gameOfStones(n):
-    for i in range (m):
-        
+    ganador=""
+    if(jugada(n)!=0):
+        ganador="P1 is the winner"
+    else:
+        ganador ="P2 is the winner"
+    return ganador
+
+def jugada(n):
+    jugadaOptima=0
+    modulo=n%7
+    if(modulo>=2 and modulo<=3):
+        jugadaOptima=2
+    elif(modulo==4):
+        jugadaOptima=3
+    elif(modulo>=5 and modulo<=6):
+        jugadaOptima=5
+    return jugadaOptima
 
 
 if __name__ == '__main__':
